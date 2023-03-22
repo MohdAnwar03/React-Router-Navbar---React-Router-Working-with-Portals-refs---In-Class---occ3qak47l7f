@@ -1,3 +1,5 @@
+// कौन कहता है वक़्त किसी का नहीं होता, मैने मेरे ही वक़्त को मुझे बर्बाद करते देखा है।
+
 import React from 'react'
 import '../styles/App.css';
 import { Link, BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';

@@ -3,29 +3,28 @@ import '../styles/App.css';
 import { Link, BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
+
 const App = () => {
 
   return (
     <div id="main">
       <BrowserRouter>
+        <div id='navbar'>
+          <Link to='/home' id='home-link'>Home</Link>
+          <Link to='/about-us' id='aboutus-link'>About Us</Link>
+        </div>
         <Switch>
-          <Route>
-            <div id='navbar'>
-              <div id='home-link'> Home</div>
-              <div id='aboutus-link'>About Us</div>
-            </div>
-          </Route>
-          <Route>
+          <Route exact path='/home'>
             <Home />
           </Route>
-          <Route >
+          <Route exact path='/about-us'>
             <AboutUs />
           </Route>
+          <Redirect from='/' to='/home' />
         </Switch>
       </BrowserRouter>
-    </div >
+    </div>
   )
 }
-
 
 export default App;
